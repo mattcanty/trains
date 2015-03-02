@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+  head
+    title Trains - #{locationName}
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+  body
+    div(class='container')
+      div(class='row')
+        div(class='col-md-6')
+          input(type='text' placeholder='Search...' list='stationCodes' name='stationCodes')
+          datalist(id='stationCodes')
+            for stationCode in [{"stationName":"Lancaster","code":"LAN"}]
+              option(value="#{stationCode.stationName}" data-value="#{stationCode.code}" )
+      div(class='row')
+        div(class='col-md-6')
+          h1 #{locationName} <small>Departures</small>
+      div(class='row')
+        div(class='col-md-1')
+          h4 Due
+        div(class='col-md-3')
+          h4 Destination
+        div(class='col-md-3')
+          h4 Platform
+      if trainServices
+        for service in trainServices.service
+          div(class='row')
+            div(class='col-md-1')
+              p #{service.std}
+            div(class='col-md-3')
+              p <abbr title="#{service.operator}">#{service.operatorCode}</abbr> #{service.destination.location[0].locationName}
+            div(class='col-md-3')
+              p #{service.platform}

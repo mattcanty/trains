@@ -1,0 +1,12 @@
+{
+  "name": "trains",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "express": "*",
+    "jade": "*",
+    "stylus": "*",
+    "nib": "*",
+    "morgan": "*"
+  }
+}

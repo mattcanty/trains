@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2015-03-01T18:30:48.792Z",
+  "locationName": "Lancaster",
+  "crs": "LAN",
+  "platformAvailable": true,
+  "trainServices": {
+    "service": [
+      {
+        "origin": {
+          "location": [
+            {
+              "locationName": "Edinburgh",
+              "crs": "EDB",
+              "via": {
+                
+              },
+              "futureChangeTo": {
+                
+              }
+            }
+          ]
+        },
+        "destination": {
+          "location": [
+            {
+              "locationName": "Manchester Airport",
+              "crs": "MIA",
+              "via": {
+                
+              },
+              "futureChangeTo": {
+                
+              }
+            }
+          ]
+        },
+        "std": "18:27",
+        "etd": "18:30",
+        "platform": "4",
+        "operator": "First TransPennine Express",
+        "operatorCode": "TP",
+        "serviceID": "Tas3w0J2gg0vg8ScoqsnDA=="
+      }
+    ]
+  }
+}
